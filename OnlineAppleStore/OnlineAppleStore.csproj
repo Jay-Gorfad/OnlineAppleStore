@@ -1,0 +1,495 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D10C510B-252D-4522-AD68-86DB6C4F84ED}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineAppleStore</RootNamespace>
+    <AssemblyName>OnlineAppleStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44338</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.html" />
+    <Content Include="about.aspx" />
+    <Content Include="about.html" />
+    <Content Include="Admin\AddProduct.aspx" />
+    <Content Include="Admin\AddUser.aspx" />
+    <Content Include="Admin\Orders.aspx" />
+    <Content Include="Admin\ProductDetails.aspx" />
+    <Content Include="Admin\Responses.aspx" />
+    <Content Include="Admin\UpdateProduct.aspx" />
+    <Content Include="Admin\UpdateUser.aspx" />
+    <Content Include="Admin\UserDetails.aspx" />
+    <Content Include="App_Data\apple_store_db.mdf" />
+    <Content Include="App_Data\apple_store_db_log.ldf">
+      <DependentUpon>apple_store_db.mdf</DependentUpon>
+    </Content>
+    <Content Include="audio\blog-audio.mp3" />
+    <Content Include="Cart.aspx" />
+    <Content Include="cart.html" />
+    <Content Include="Checkout.aspx" />
+    <Content Include="checkout.html" />
+    <Content Include="Confirm.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="contact.html" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\core.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\material-design-iconic-font.css" />
+    <Content Include="css\plugins\animate.min.css" />
+    <Content Include="css\plugins\fancybox\blank.gif" />
+    <Content Include="css\plugins\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="css\plugins\fancybox\fancybox_loading.gif" />
+    <Content Include="css\plugins\fancybox\fancybox_overlay.png" />
+    <Content Include="css\plugins\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="css\plugins\fancybox\fancybox_sprite.png" />
+    <Content Include="css\plugins\fancybox\jquery.fancybox.css" />
+    <Content Include="css\plugins\font\ytp-regular.html" />
+    <Content Include="css\plugins\images\ui-bg_glass_75_d0e5f5_1x400.html" />
+    <Content Include="css\plugins\images\ui-bg_glass_85_dfeffc_1x400.html" />
+    <Content Include="css\plugins\images\ui-bg_glass_95_fef1ec_1x400.html" />
+    <Content Include="css\plugins\images\ui-bg_gloss-wave_55_5c9ccc_500x100.html" />
+    <Content Include="css\plugins\images\ui-bg_inset-hard_100_f5f8f9_1x100.html" />
+    <Content Include="css\plugins\images\ui-bg_inset-hard_100_fcfdfd_1x100.html" />
+    <Content Include="css\plugins\images\ui-icons_217bc0_256x240.html" />
+    <Content Include="css\plugins\images\ui-icons_2e83ff_256x240.html" />
+    <Content Include="css\plugins\images\ui-icons_469bdd_256x240.html" />
+    <Content Include="css\plugins\images\ui-icons_6da8d5_256x240.html" />
+    <Content Include="css\plugins\images\ui-icons_cd0a0a_256x240.html" />
+    <Content Include="css\plugins\images\ui-icons_d8e7f3_256x240.html" />
+    <Content Include="css\plugins\images\ui-icons_f9bd01_256x240.html" />
+    <Content Include="css\plugins\jquery-ui.min.css" />
+    <Content Include="css\plugins\jquery.mb.YTPlayer.min.css" />
+    <Content Include="css\plugins\meanmenu.min.css" />
+    <Content Include="css\plugins\slick.css" />
+    <Content Include="css\plugins\textanimate.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\shortcode\default.css" />
+    <Content Include="css\shortcode\footer.css" />
+    <Content Include="css\shortcode\header.css" />
+    <Content Include="css\shortcode\shortcodes.css" />
+    <Content Include="css\shortcode\slider.css" />
+    <Content Include="css\style-customizer.css" />
+    <Content Include="elements-accordion.html" />
+    <Content Include="elements-alerts.html" />
+    <Content Include="elements-audio.html" />
+    <Content Include="elements-banner.html" />
+    <Content Include="elements-brands.html" />
+    <Content Include="elements-breadcrumbs.html" />
+    <Content Include="elements-buttons.html" />
+    <Content Include="elements-call-to-action.html" />
+    <Content Include="elements-contact-form.html" />
+    <Content Include="elements-featured-product-1.html" />
+    <Content Include="elements-featured-product-2.html" />
+    <Content Include="elements-footer-1.html" />
+    <Content Include="elements-footer-2.html" />
+    <Content Include="elements-footer-3.html" />
+    <Content Include="elements-header-1-no-sticky.html" />
+    <Content Include="elements-header-1-sticky.html" />
+    <Content Include="elements-header-2-no-sticky.html" />
+    <Content Include="elements-header-2-sticky.html" />
+    <Content Include="elements-map.html" />
+    <Content Include="elements-newsletter.html" />
+    <Content Include="elements-pagination.html" />
+    <Content Include="elements-product-tab-1.html" />
+    <Content Include="elements-product-tab-2.html" />
+    <Content Include="elements-progress-bars.html" />
+    <Content Include="elements-section-title.html" />
+    <Content Include="elements-sidebar-left.html" />
+    <Content Include="elements-sidebar-right.html" />
+    <Content Include="elements-single-product.html" />
+    <Content Include="elements-tab.html" />
+    <Content Include="elements-team.html" />
+    <Content Include="elements-toggles.html" />
+    <Content Include="elements-typography.html" />
+    <Content Include="elements-up-comming-product-1.html" />
+    <Content Include="elements-up-comming-product-2.html" />
+    <Content Include="elements-video.html" />
+    <Content Include="images\bg\1.jpg" />
+    <Content Include="images\bg\10.html" />
+    <Content Include="images\bg\2.jpg" />
+    <Content Include="images\bg\3.jpg" />
+    <Content Include="images\bg\4.jpg" />
+    <Content Include="images\bg\5.jpg" />
+    <Content Include="images\bg\6.jpg" />
+    <Content Include="images\bg\7.jpg" />
+    <Content Include="images\bg\8.jpg" />
+    <Content Include="images\bg\9.jpg" />
+    <Content Include="images\customizer\bodybg\01.jpg" />
+    <Content Include="images\customizer\bodybg\02.jpg" />
+    <Content Include="images\customizer\bodybg\03.jpg" />
+    <Content Include="images\customizer\bodybg\04.jpg" />
+    <Content Include="images\customizer\bodybg\05.jpg" />
+    <Content Include="images\customizer\bodybg\06.jpg" />
+    <Content Include="images\customizer\bodybg\07.jpg" />
+    <Content Include="images\customizer\bodybg\08.jpg" />
+    <Content Include="images\customizer\pattern\1.png" />
+    <Content Include="images\customizer\pattern\2.png" />
+    <Content Include="images\customizer\pattern\3.png" />
+    <Content Include="images\customizer\pattern\4.png" />
+    <Content Include="images\customizer\pattern\5.png" />
+    <Content Include="images\customizer\pattern\6.png" />
+    <Content Include="images\customizer\pattern\7.png" />
+    <Content Include="images\customizer\pattern\8.png" />
+    <Content Include="images\logo\logo.png" />
+    <Content Include="images\main-bg-0.html" />
+    <Content Include="images\pattern\pattern-bg.html" />
+    <Content Include="img\author\1.jpg" />
+    <Content Include="img\author\2.jpg" />
+    <Content Include="img\author\3.jpg" />
+    <Content Include="img\banner\1.jpg" />
+    <Content Include="img\banner\2.jpg" />
+    <Content Include="img\banner\3.jpg" />
+    <Content Include="img\banner\4.jpg" />
+    <Content Include="img\bg\blog-photo-bg.png" />
+    <Content Include="img\bg\grid.png" />
+    <Content Include="img\bg\ribbon.png" />
+    <Content Include="img\blog\1.jpg" />
+    <Content Include="img\blog\10.jpg" />
+    <Content Include="img\blog\2.jpg" />
+    <Content Include="img\blog\3.jpg" />
+    <Content Include="img\blog\4.jpg" />
+    <Content Include="img\blog\5.jpg" />
+    <Content Include="img\blog\6.jpg" />
+    <Content Include="img\blog\7.jpg" />
+    <Content Include="img\blog\8.jpg" />
+    <Content Include="img\breadcrumb\1.png" />
+    <Content Include="img\cart\1.jpg" />
+    <Content Include="img\cart\2.jpg" />
+    <Content Include="img\cart\3.jpg" />
+    <Content Include="img\cart\4.jpg" />
+    <Content Include="img\cart\5.jpg" />
+    <Content Include="img\cart\6.jpg" />
+    <Content Include="img\icon\down-arrow.png" />
+    <Content Include="img\icon\favicon.png" />
+    <Content Include="img\logo\logo.png" />
+    <Content Include="img\mega-menu\1.jpg" />
+    <Content Include="img\others\about.jpg" />
+    <Content Include="img\others\error.jpg" />
+    <Content Include="img\payment\1.jpg" />
+    <Content Include="img\payment\1.png" />
+    <Content Include="img\payment\2.jpg" />
+    <Content Include="img\payment\2.png" />
+    <Content Include="img\payment\3.jpg" />
+    <Content Include="img\payment\3.png" />
+    <Content Include="img\payment\4.jpg" />
+    <Content Include="img\payment\4.png" />
+    <Content Include="img\product-2\1.jpg" />
+    <Content Include="img\product-2\2.jpg" />
+    <Content Include="img\product-2\3.jpg" />
+    <Content Include="img\product-2\4.jpg" />
+    <Content Include="img\product-2\5.jpg" />
+    <Content Include="img\product-2\6.jpg" />
+    <Content Include="img\product-2\7.jpg" />
+    <Content Include="img\product\1.jpg" />
+    <Content Include="img\product\10.jpg" />
+    <Content Include="img\product\11.jpg" />
+    <Content Include="img\product\12.jpg" />
+    <Content Include="img\product\2.jpg" />
+    <Content Include="img\product\3.jpg" />
+    <Content Include="img\product\4.jpg" />
+    <Content Include="img\product\5.jpg" />
+    <Content Include="img\product\6.jpg" />
+    <Content Include="img\product\7.jpg" />
+    <Content Include="img\product\8.jpg" />
+    <Content Include="img\product\9.jpg" />
+    <Content Include="img\product\quickview.jpg" />
+    <Content Include="img\slider\slider-1\1.jpg" />
+    <Content Include="img\slider\slider-1\2.jpg" />
+    <Content Include="img\slider\slider-2\layer-1.png" />
+    <Content Include="img\slider\slider-2\layer-2.png" />
+    <Content Include="img\slider\slider-2\slider-1.jpg" />
+    <Content Include="img\team\1.png" />
+    <Content Include="img\team\2.png" />
+    <Content Include="img\team\3.png" />
+    <Content Include="img\up-comming\1.jpg" />
+    <Content Include="img\up-comming\2.jpg" />
+    <Content Include="index-4.html" />
+    <Content Include="index.aspx" />
+    <Content Include="index.html" />
+    <Content Include="js\ajax-mail.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\map.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\vendor\jquery-3.6.0.min.js" />
+    <Content Include="js\vendor\jquery-migrate-3.3.2.min.js" />
+    <Content Include="js\vendor\modernizr-3.11.2.min.js" />
+    <Content Include="lib\css\nivo-slider.css" />
+    <Content Include="lib\js\jquery.nivo.slider.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="login.html" />
+    <Content Include="my-account-2.html" />
+    <Content Include="My-account.html" />
+    <Content Include="order.html" />
+    <Content Include="ProductDetails.aspx" />
+    <Content Include="shop-list-right-sidebar.html" />
+    <Content Include="shop-list.html" />
+    <Content Include="Shop.aspx" />
+    <Content Include="shop.html" />
+    <Content Include="single-product-left-sidebar.html" />
+    <Content Include="single-product-no-sidebar.html" />
+    <Content Include="single-product.html" />
+    <Content Include="style.css" />
+    <Content Include="Web.config" />
+    <Content Include="wishlist.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Responses.aspx.cs">
+      <DependentUpon>Responses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Responses.aspx.designer.cs">
+      <DependentUpon>Responses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpdateProduct.aspx.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UpdateProduct.aspx.designer.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\AddressClass.cs" />
+    <Compile Include="Class\CartClass.cs" />
+    <Compile Include="Class\Connection.cs" />
+    <Compile Include="Class\LoginRegister.cs" />
+    <Compile Include="Class\OrderClass.cs" />
+    <Compile Include="Class\ProductAdd.cs" />
+    <Compile Include="Class\ResponsesClass.cs" />
+    <Compile Include="Class\UserAdd.cs" />
+    <Compile Include="Class\UserObj.cs" />
+    <Compile Include="Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop.aspx.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop.aspx.designer.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\Material-Design-Iconic-Fontd1f1.ttf" />
+    <Content Include="fonts\Material-Design-Iconic-Fontd1f1.woff" />
+    <Content Include="fonts\Material-Design-Iconic-Fontd1f1.woff2" />
+    <Content Include="Admin\Admin.Master" />
+    <None Include="packages.config" />
+    <Content Include="User.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="imgs\products\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>38389</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44338/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
